@@ -14,4 +14,4 @@ def update_topics(mongo_collection, name, topics):
     :param topics:
     :return:
     """
-    mongo_collection.updatemany({"name": "name"}, {$set: {"topics": "topics"}})
+    mongo_collection.update_many({"name": "name"}, {"$set": {"topics": "topics"}})
